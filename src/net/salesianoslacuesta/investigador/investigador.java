@@ -40,4 +40,17 @@ public abstract class Investigador {
         this.sueldo = sueldo;
     }
 
+    public void identificacion() {
+        System.out.println("Nombre: " + nombre);
+        System.out.println("Especialidad: " + especialidad);
+        System.out.println("Sueldo: " + sueldo);
+    }
+
+    public void calculoBasico(int valor1, int valor2) {
+        System.out.println("Suma: " + (valor1 + valor2));
+        System.out.println("Resta: " + (valor1 - valor2));
+    }
+
+    public abstract String estadoSueldo();
+    public abstract void trabajar();
 }
