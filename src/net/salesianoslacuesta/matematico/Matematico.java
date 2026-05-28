@@ -11,4 +11,15 @@ public class Matematico extends Investigador {
         super(nombre, "Matemático", sueldo);
         this.resultadosActuales = matrizInicial;
     }
+
+    // Getter
+
+    public int[][] getResultadosActuales() {
+        return resultadosActuales;
+    }
+
+    // Setter
+    public void setResultadosActuales(int[][] matrizInicial) {
+        this.resultadosActuales = matrizInicial;
+    }
 }
