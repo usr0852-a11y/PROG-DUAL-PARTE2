@@ -26,6 +26,12 @@ public class App {
 
         opcionPrincipal = scanner.nextInt();
             
+        try {
+            opcion = Integer.parseInt(sc.nextLine());
+        } catch (Exception e) {
+            System.out.println("Error: introduce un número válido.");
+            continue;
+        }
         
         if (opcionPrincipal == 1) {
 
