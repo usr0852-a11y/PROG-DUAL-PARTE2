@@ -8,4 +8,16 @@ public class Biologo extends Investigador {
         super(nombre, "Biólogo", sueldo);
         this.especimenes = new ArrayList<>();
     }
+
+    //Getter
+
+    public ArrayList<String> getEspecimenes() {
+        return especimenes;
+    }
+
+    //Setter
+
+    public void setEspecimenes(ArrayList<String> especimenes) {
+        this.especimenes = especimenes;
+    }
 }
