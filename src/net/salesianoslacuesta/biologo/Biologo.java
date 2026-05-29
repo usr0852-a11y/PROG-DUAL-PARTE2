@@ -55,6 +55,7 @@ public class Biologo extends Investigador {
 
     }
 
+    @Overradie
 
     public void mostrarEspecimenes() {
         System.out.println("Especímenes actuales:");
@@ -62,5 +63,6 @@ public class Biologo extends Investigador {
             System.out.println("- " + especimenes.get(i));
         }
     }
+
 
 }
