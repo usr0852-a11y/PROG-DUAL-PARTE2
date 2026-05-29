@@ -1,4 +1,4 @@
-package net.salesianoslacuesta.matematico;
+
 
 import net.salesianoslacuesta.matematico.Matematico;
 import net.salesianoslacuesta.investigador.Investigador;
