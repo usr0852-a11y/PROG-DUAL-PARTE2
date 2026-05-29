@@ -1,10 +1,12 @@
+package net.salesianoslacuesta.biologo;
+
 import net.salesianoslacuesta.investigador.Investigador;
 
 import java.util.ArrayList;
 
 import net.salesianoslacuesta.biologo.Biologo;
 
-public class Biologo extends Investigador {
+public class Biologo extends Investigador implements TrabajoDual {
     private ArrayList<String> especimenes;
 
     public Biologo(String nombre, double sueldo) {
@@ -55,7 +57,29 @@ public class Biologo extends Investigador {
 
     }
 
-    @Overradie
+    @Override
+    public void trabajoDual() {
+        if (especimenes.isEmpty()) {
+            System.out.println("No hay especímenes para trabajo dual");
+            return;
+        }
+
+        int izquierda = 0;
+        int derecha = especimenes.size() - 1;
+
+        while (izquierda < derecha) {
+            String temporal2 = especimenes.get(izquierda);
+            especimenes.set(izquierda, especimenes.get(derecha));
+            especimenes.set(derecha, temporal2);
+
+            izquierda++;
+            derecha--;
+
+        }
+        System.out.println("Trabajo dual del biólogo: lista invertidaaa");
+    }
+
+    @Override
 
     public void mostrarEspecimenes() {
         System.out.println("Especímenes actuales:");
