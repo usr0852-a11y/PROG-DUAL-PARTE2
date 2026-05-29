@@ -1,22 +1,51 @@
-<<<<<<< HEAD
-## Getting Started
+🔹 Investigador (clase padre)
+Nombre
 
-Welcome to the VS Code Java world. Here is a guideline to help you get started to write Java code in Visual Studio Code.
+Sueldo
 
-## Folder Structure
+Métodos comunes: trabajar(), estadoSueldo()
 
-The workspace contains two folders by default, where:
+🔹 Biólogo
+Lista de especímenes
 
-- `src`: the folder to maintain sources
-- `lib`: the folder to maintain dependencies
+Añadir y mostrar especímenes
 
-Meanwhile, the compiled output files will be generated in the `bin` folder by default.
+Implementa la interfaz TrabajoDual
 
-> If you want to customize the folder structure, open `.vscode/settings.json` and update the related settings there.
+En el trabajo dual invierte la lista
 
-## Dependency Management
+🔹 Químico
+Lista de elementos
 
-The `JAVA PROJECTS` view allows you to manage your dependencies. More details can be found [here](https://github.com/microsoft/vscode-java-dependency#manage-dependencies).
-=======
-# PROG-DUAL-PARTE2
->>>>>>> e3343cb237eae3f0a25f73b3b4f993142d3ac122
+Añadir y mostrar elementos
+
+Implementa TrabajoDual
+
+En el trabajo dual mezcla elementos
+
+🔹 Matemático
+Matriz 3x3
+
+Rellenar y mostrar matriz
+
+No implementa trabajo dual
+
+🔹 Interfaz TrabajoDual
+Método obligatorio: trabajoDual()
+
+App (menú principal)
+El programa permite:
+
+Seleccionar investigador
+
+Añadir datos
+
+Mostrar datos
+
+Ejecutar trabajar()
+
+Ejecutar trabajoDual() (si aplica)
+
+Ver estado del sueldo
+
+Todo mediante menús por consola con control de errores.
