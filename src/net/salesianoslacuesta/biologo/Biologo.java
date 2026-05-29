@@ -1,4 +1,7 @@
 import net.salesianoslacuesta.investigador.Investigador;
+
+import java.util.ArrayList;
+
 import net.salesianoslacuesta.biologo.Biologo;
 
 public class Biologo extends Investigador {
@@ -20,4 +23,44 @@ public class Biologo extends Investigador {
     public void setEspecimenes(ArrayList<String> especimenes) {
         this.especimenes = especimenes;
     }
+
+    public void añadirEspecimen(String especimen) {
+        especimenes.add(especimen);
+    }
+
+    @Override
+    public String estadoSueldo() {
+        if(sueldo < 1500) {
+            return "Sueldo insuficiente. Solicitud de aumento OBLIGATORIO.";
+        }
+        return "Sueldo correcto.";
+    }
+
+    @Override
+    public void trabajar() {
+        if(especimenes.isEmpty()) {
+            System.out.println("No hay especímenes para trabajar");
+            return;
+        }
+    int indiceMayor = 0;
+        
+    for (int i = 1; i < especimenes.size(); i++) {
+        if (especimenes.get(i).length() > especimenes.get(indiceMayor).length()) {
+            indiceMayor = i;
+        }
+    }
+    String eliminado = especimenes.remove(indiceMayor);
+    
+    System.out.println("Se ha eliminado el espécimen con más caracteres: " + eliminado);
+
+    }
+
+
+    public void mostrarEspecimenes() {
+        System.out.println("Especímenes actuales:");
+        for(int i = 0; i < especimenes.size(); i++) {
+            System.out.println("- " + especimenes.get(i));
+        }
+    }
+
 }
